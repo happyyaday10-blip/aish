@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Page for Aishwarya</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff69b4, #ffb6c1, #ffc0cb, #ff69b4);
+            background-size: 400% 400%;
+            animation: rotateBackground 10s ease-in-out infinite;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        @keyframes rotateBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .name-top {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .glowing-heart {
+            font-size: 4em;
+            color: #ff1493;
+            animation: glow 2s ease-in-out infinite alternate, rotate 3s linear infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493; }
+            to { text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493; }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .turning-animation {
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYxNDkzIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=') no-repeat center;
+            animation: spin 2s linear infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .letter {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px 0;
+            animation: typeWriter 5s steps(40, end) forwards;
+            white-space: pre-wrap;
+            opacity: 0;
+        }
+
+        @keyframes typeWriter {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .name-bottom {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out 5s forwards;
+            opacity: 0;
+        }
+
+        .your-saransh {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out 6s forwards;
+            opacity: 0;
+        }
+
+        .song {
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out 7s forwards;
+            opacity: 0;
+        }
+
+        .rose {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyMCIgZmlsbD0iI2ZmMDAwMCIvPgogIDxjaXJjbGUgY3g9IjI1IiBjeT0iMTUiIHI9IjEwIiBmaWxsPSIjZmYwMDAwIi8+CiAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMTAiIGZpbGw9IiNmZjAwMDAiLz4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjM1IiByPSI4IiBmaWxsPSIjZmYwMDAwIi8+Cjwvc3ZnPg==') no-repeat center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .rose:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .rose:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .rose:nth-child(3) { top: 50%; left: 5%; animation-delay: 2s; }
+        .rose:nth-child(4) { top: 70%; right: 5%; animation-delay: 3s; }
+        .rose:nth-child(5) { top: 30%; left: 50%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name-top">Aishwarya</div>
+        <div class="glowing-heart">❤️</div>
+        <div class="turning-animation"></div>
+        <div class="letter">Every time I think of you, my heart feels warm and calm, like it has found its home. Your smile is my favorite sight, and your voice is my favorite comfort. You make ordinary moments feel magical just by being you. Loving you is the easiest and most beautiful thing I have ever done. I admire your kindness, your strength, and the way you understand me without words. Thank you for being my happiness, my peace, and my greatest blessing. No matter where life takes us, my heart will always choose you, today and forever.</div>
+        <div class="name-bottom">Saransh</div>
+        <div class="your-saransh">Your Saransh</div>
+        <div class="song">
+            <iframe src="https://open.spotify.com/embed/track/0fCQRUbk8LIQTdQYGNtGyv" width="300" height="380" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Animated Roses -->
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+    <div class="rose"></div>
+</body>
+</html>
