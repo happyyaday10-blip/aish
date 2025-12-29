@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Aishwarya ❤️</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    height:100vh;
+    background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+@keyframes bg{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* floating hearts background */
+.heart{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    transform:rotate(45deg);
+    animation:float 8s linear infinite;
+    opacity:0.4;
+}
+.heart:before,
+.heart:after{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+}
+.heart:before{top:-10px;left:0}
+.heart:after{left:-10px;top:0}
+
+@keyframes float{
+    0%{bottom:-10%;opacity:0}
+    50%{opacity:0.6}
+    100%{bottom:110%;opacity:0}
+}
+
+/* Card */
+.card{
+    width:340px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    border:2px solid rgba(255,255,255,0.4);
+    animation:flip 2s ease;
+    position:relative;
+}
+@keyframes flip{
+    from{transform:rotateY(90deg);opacity:0}
+    to{transform:rotateY(0);opacity:1}
+}
+
+.tag{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ff6f91;
+    color:white;
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.name{
+    font-size:32px;
+    color:#fff;
+    margin-top:15px;
+    letter-spacing:2px;
+}
+
+.glow-heart{
+    font-size:40px;
+    color:#ff2d55;
+    animation:pulse 1.5s infinite;
+    margin:10px 0;
+}
+@keyframes pulse{
+    0%{transform:scale(1);text-shadow:0 0 5px #ff2d55}
+    50%{transform:scale(1.2);text-shadow:0 0 20px #ff2d55}
+    100%{transform:scale(1)}
+}
+
+p{
+    font-size:14px;
+    color:#fff;
+    line-height:1.5;
+    margin:10px 0 20px;
+}
+
+/* Stickers */
+.sticker{
+    position:absolute;
+    font-size:24px;
+}
+.s1{top:-10px;right:-10px}
+.s2{bottom:-10px;left:-10px}
+
+/* Surprise Button */
+button{
+    background:#ff4f7b;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+button:hover{
+    transform:scale(1.1);
+    background:#ff2d55;
+}
+
+iframe{
+    margin-top:15px;
+    border-radius:12px;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- floating hearts -->
+<script>
+for(let i=0;i<25;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.style.left=Math.random()*100+"%";
+    h.style.animationDuration=5+Math.random()*5+"s";
+    document.body.appendChild(h);
+}
+</script>
+
+<div class="card">
+    <div class="tag">Your Mitthu</div>
+    <div class="sticker s1">🎀</div>
+    <div class="sticker s2">💌</div>
+
+    <div class="name">Aishwarya</div>
+    <div class="glow-heart">❤️</div>
+
+    <p>
+        You are my calm in every storm and my happiness in the simplest moments.
+        Just being with you makes everything feel right.
+        Your smile is my favorite sight, and your presence is my greatest comfort.
+        I’m truly grateful to have you in my life. 💕
+    </p>
+
+    <button onclick="surprise()">Surprise 💖</button>
+
+    <iframe id="song" style="width:100%;height:80px"
+    src="https://open.spotify.com/embed/track/5sUSbJo0brScvv48ZZ1HrQ"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+</div>
+
+<script>
+function surprise(){
+    document.getElementById("song").style.display="block";
+    for(let i=0;i<30;i++){
+        let h=document.createElement("div");
+        h.className="heart";
+        h.style.left=Math.random()*100+"%";
+        h.style.animationDuration="4s";
+        document.body.appendChild(h);
+    }
+}
+</script>
+
+</body>
+</html>
